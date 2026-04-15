@@ -9,7 +9,7 @@ langchain-community
 langchain-huggingface
 
 # Streamlit UI
-streamlit
+streamlit==1.52.2
 
 # Environment Variable Management
 python-dotenv
