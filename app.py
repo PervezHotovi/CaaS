@@ -17,7 +17,16 @@ st.set_page_config(page_title="SP-Bot", page_icon="🤖")
 
 # ------------------ SIDEBAR ------------------
 st.sidebar.title("GenAI SP-Bot")
-st.sidebar.write("Model: Meta-llama/Llama-3.1-8B-Instruct")
+
+# Hide Streamlit default menu, footer, and header
+hide_st_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # ------------------ LLM ------------------
 llm = HuggingFaceEndpoint(
